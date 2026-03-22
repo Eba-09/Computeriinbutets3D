@@ -587,19 +587,13 @@ const COMPS = [
     specs:{'Багтаамж':'2ТБ','Унших':'7450МБ/с','Бичих':'6900МБ/с','Интерфейс':'PCIe 4.0','NAND':'MLC V7'},
     bars:[{l:'Унших',v:95},{l:'Бичих',v:91},{l:'Тэсвэр',v:88}], build:buildSSD },
 ];
-
-// ════════════════════════════════════
 //  VIDEO LESSONS DATA
-//  → youtubeId талбарт YouTube видеоны ID-г тавина
-//    жишээ: https://youtu.be/dQw4w9WgXcQ → id нь "dQw4w9WgXcQ"
-//  → Өөрийн видео ID-г энд оруулна уу
-// ════════════════════════════════════
 const VIDEOS = [
   {
     id: 'v1',
     title: 'Компьютерийн эд ангиудын танилцуулга',
     desc: 'Компьютерийн үндсэн эд ангиуд, тэдгээрийн үүрэг зориулалтыг ерөнхий танилцуулга.',
-    youtubeId: 'ExxFxD4OSZ0',   // ← YouTube ID энд
+    youtubeId: 'ABof-PJrteg',   // ← YouTube ID энд
     duration: '12:34',
     tags: ['Ерөнхий', 'Танилцуулга'],
     badge: 'new',
@@ -613,7 +607,6 @@ const CATS = [
   { id:'board',  icon:'🖥️', title:'Системийн төхөөрөмж',     sub:'System Board',     members:['motherboard'] },
 ];
 //  PAGE SWITCH
-// ════════════════════════════════════
 function switchPage(n){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
@@ -622,10 +615,7 @@ function switchPage(n){
   document.querySelectorAll('.nav-tab')[idx].classList.add('active');
   if(n==='sort') buildSort();
 }
-
-// ════════════════════════════════════
 //  THREE.JS HELPERS
-// ════════════════════════════════════
 function mk(geo,mat,x=0,y=0,z=0,rx=0,ry=0,rz=0){
   const m=new THREE.Mesh(geo,mat);
   m.position.set(x,y,z);m.rotation.set(rx,ry,rz);
@@ -634,7 +624,6 @@ function mk(geo,mat,x=0,y=0,z=0,rx=0,ry=0,rz=0){
 function B(w,h,d,mat,x=0,y=0,z=0){return mk(new THREE.BoxGeometry(w,h,d),mat,x,y,z);}
 function C(rt,rb,h,s,mat,x=0,y=0,z=0,rx=0){return mk(new THREE.CylinderGeometry(rt,rb,h,s),mat,x,y,z,rx,0,0);}
 function Sp(r,s,mat,x=0,y=0,z=0){return mk(new THREE.SphereGeometry(r,s,s),mat,x,y,z);}
-
 const M={
   pcb:(c=0x1a5c2a)=>new THREE.MeshStandardMaterial({color:c,metalness:.25,roughness:.6}),
   aluminum:()=>new THREE.MeshStandardMaterial({color:0x9aa8b8,metalness:.88,roughness:.18}),
