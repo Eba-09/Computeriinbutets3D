@@ -483,10 +483,8 @@ header{
 </div>
 
 </div><!-- #app -->
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-// ════════════════════════════════════
 //  DATA
 // ════════════════════════════════════
 const COMPS = [
@@ -507,7 +505,7 @@ const COMPS = [
   { id:'cpu', icon:'⚡', name:'Процессор', audio:'./Cpu.mp3', sub:'Intel Core i9-14900K',
     role:{
       desc:'Процессор нь компьютерийн "тархи" юм. Бүх тооцооллыг гүйцэтгэж, программуудын зааврыг биелүүлдэг хамгийн чухал эд анги.',
-      purpose:'Тооцоолох нэгж (CPU)',
+      purpose:'Тооцоолох төхөөрөмж (CPU)',
       facts:[
         {icon:'🧠', text:'Секундэд <b>тэрбум тооцоолол</b> хийдэг'},
         {icon:'⚡', text:'<b>24 цөм</b> — олон ажлыг зэрэг гүйцэтгэдэг'},
@@ -607,76 +605,13 @@ const VIDEOS = [
     badge: 'new',
     section: 'Үндсэн мэдлэг'
   },
-  {
-    id: 'v2',
-    title: 'Эх хавтан — Motherboard',
-    desc: 'Эх хавтангийн бүтэц, сокет, слот, порт болон сонгох арга зүй.',
-    youtubeId: 'kia_ATEBnSk',
-    duration: '18:20',
-    tags: ['Motherboard', 'Эх хавтан'],
-    badge: '',
-    section: 'Үндсэн мэдлэг'
-  },
-  {
-    id: 'v3',
-    title: 'Процессор — CPU',
-    desc: 'CPU-ийн цөм, урсгал, кэш ойлголтууд болон Intel vs AMD харьцуулалт.',
-    youtubeId: '7CVEP8sBNyA',
-    duration: '22:05',
-    tags: ['CPU', 'Процессор'],
-    badge: '',
-    section: 'Үндсэн мэдлэг'
-  },
-  {
-    id: 'v4',
-    title: 'Санах ой — RAM',
-    desc: 'DDR4 vs DDR5, давтамж, latency болон хоёр суваг горим.',
-    youtubeId: 'QBHOt0bDS0Y',
-    duration: '14:48',
-    tags: ['RAM', 'Санах ой'],
-    badge: '',
-    section: 'Дунд түвшин'
-  },
-  {
-    id: 'v5',
-    title: 'Видео карт — GPU',
-    desc: 'GPU-ийн архитектур, VRAM, Ray Tracing болон DLSS технологи.',
-    youtubeId: 'dDLdHW_i2v4',
-    duration: '25:12',
-    tags: ['GPU', 'Видео карт'],
-    badge: 'new',
-    section: 'Дунд түвшин'
-  },
-  {
-    id: 'v6',
-    title: 'Хадгалалт — SSD & HDD',
-    desc: 'NVMe, SATA SSD болон HDD-ийн ялгаа, хурд, найдвартай байдал.',
-    youtubeId: 'KgnKvwMFQn8',
-    duration: '16:30',
-    tags: ['SSD', 'Хадгалалт'],
-    badge: '',
-    section: 'Дунд түвшин'
-  },
-  {
-    id: 'v7',
-    title: 'Компьютер угсрах гарын авлага',
-    desc: 'Эхнээс эцэс хүртэл компьютер угсрах бүрэн гарын авлага.',
-    youtubeId: 'PXaLc9AYIcg',
-    duration: '45:00',
-    tags: ['Угсрах', 'Практик'],
-    badge: '',
-    section: 'Практик хичээл'
-  },
 ];
-
 const CATS = [
   { id:'input',  icon:'⌨️', title:'Оролтын төхөөрөмж', sub:'Input Devices',    members:['mouse','keyboard'] },
-  { id:'proc',   icon:'⚡', title:'Боловсруулах нэгж',  sub:'Processing',       members:['cpu','gpu'] },
+  { id:'proc',   icon:'⚡', title:'Боловсруулах төхөөрөмж',  sub:'Processing',       members:['cpu','gpu'] },
   { id:'store',  icon:'💾', title:'Хадгалах төхөөрөмж', sub:'Storage / Memory', members:['ram','ssd'] },
-  { id:'board',  icon:'🖥️', title:'Системийн нэгж',     sub:'System Board',     members:['motherboard'] },
+  { id:'board',  icon:'🖥️', title:'Системийн төхөөрөмж',     sub:'System Board',     members:['motherboard'] },
 ];
-
-// ════════════════════════════════════
 //  PAGE SWITCH
 // ════════════════════════════════════
 function switchPage(n){
